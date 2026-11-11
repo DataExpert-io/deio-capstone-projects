@@ -1,0 +1,106 @@
+{
+  "run_id": "manual",
+  "total_checks": 10,
+  "passed": 10,
+  "failed": [],
+  "checks": [
+    {
+      "check_id": "C1",
+      "name": "label event row scale >= 1M",
+      "passed": true,
+      "detail": {
+        "rows": 1280400,
+        "min": 1000000
+      }
+    },
+    {
+      "check_id": "C2",
+      "name": "cue coverage per episode",
+      "passed": true,
+      "detail": {
+        "episodes_with_cues": 5,
+        "episodes": 5
+      }
+    },
+    {
+      "check_id": "C3",
+      "name": "cue timestamps monotonic",
+      "passed": true,
+      "detail": {
+        "violations": 0
+      }
+    },
+    {
+      "check_id": "C4",
+      "name": "every cue has tokens",
+      "passed": true,
+      "detail": {
+        "cues_without_tokens": 0
+      }
+    },
+    {
+      "check_id": "C5",
+      "name": "board element referential integrity",
+      "passed": true,
+      "detail": {
+        "orphan_links": 0
+      }
+    },
+    {
+      "check_id": "C6",
+      "name": "every window annotated",
+      "passed": true,
+      "detail": {
+        "windows_missing_cluster": 0
+      }
+    },
+    {
+      "check_id": "C7",
+      "name": "window clusters resolve to taxonomy",
+      "passed": true,
+      "detail": {
+        "invalid_cluster_ids": 0
+      }
+    },
+    {
+      "check_id": "C8",
+      "name": "annotation/token-evidence agreement >= 60% (evidence windows)",
+      "passed": true,
+      "detail": {
+        "agreement": 0.8223,
+        "evidence_coverage": 0.7715,
+        "min": 0.6
+      }
+    },
+    {
+      "check_id": "C9",
+      "name": "CDF fidelity gates pass",
+      "passed": true,
+      "detail": {
+        "source_derived_min": {
+          "measured": 0.9248,
+          "threshold": 0.85,
+          "direction": ">="
+        },
+        "synthetic_total_max": {
+          "measured": 0.0752,
+          "threshold": 0.15,
+          "direction": "<"
+        },
+        "generative_backfill_max": {
+          "measured": 0.0,
+          "threshold": 0.1,
+          "direction": "<"
+        }
+      }
+    },
+    {
+      "check_id": "C10",
+      "name": "every cluster label earns token evidence",
+      "passed": true,
+      "detail": {
+        "clusters_without_evidence": 0
+      }
+    }
+  ]
+}
